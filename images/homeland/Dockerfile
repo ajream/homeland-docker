@@ -3,6 +3,8 @@ FROM homeland/base:1.0.0
 
 ENV RAILS_ENV 'production'
 
+RUN curl https://get.acme.sh | sh
+
 RUN useradd ruby -s /bin/bash -m -U &&\
     mkdir -p /var/www &&\
     cd /var/www &&\
